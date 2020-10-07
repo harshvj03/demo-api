@@ -1,3 +1,26 @@
 To make a repo using git api use this command : 
 
-curl -u "userNameHere" https://api.github.com/user/repos -d '{"name":"repoNameHere","private":true}' 
+curl -u "userNameHere" https://api.github.com/user/repos -d '{"name":"repoNameHere","private":true}'
+
+To send a email using gmail api : 
+
+curl --ssl-reqd \
+
+  --url 'smtps://smtp.gmail.com:465' \
+
+  --user 'username@gmail.com:password' \
+
+  --mail-from 'username@gmail.com' \
+
+  --mail-rcpt 'john@example.com' \
+
+  --upload-file mail.txt
+
+mail.txt: 
+From: "User Name" <username@gmail.com>
+To: "John Smith" <john@example.com>
+Subject : this is a test  
+
+Hi John,
+I am sending this mail with curl thru my gmail account
+Bye.
