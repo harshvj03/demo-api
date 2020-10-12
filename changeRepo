@@ -1,0 +1,10 @@
+#!/bin/bash
+
+user=harshvj03
+
+newName='{"name": "demo-new-api"}'
+
+oldName="demo-api"
+
+
+curl -u "$user" -X PATCH -d "$newName" https://api.github.com/repos/$user/$oldName
